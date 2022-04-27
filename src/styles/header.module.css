@@ -1,0 +1,12 @@
+.header {
+	border-bottom: 1px solid #ccc;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.app-name {
+	text-align: center;
+	color: #fff;
+	font-size: 2.1rem;
+}

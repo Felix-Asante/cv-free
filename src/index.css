@@ -7,6 +7,7 @@
 :root {
 	--background: #2a2a2b;
 	--success: #0da65b;
+	--white: #fff;
 }
 body {
 	margin: 0;
@@ -16,8 +17,21 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--background);
+	overflow-y: hidden;
 }
 
 .text-success {
 	color: var(--success);
+}
+
+/* ! LAYOUT STYLES */
+.flex {
+	display: flex;
+}
+
+.contenu {
+	flex: 30%;
+}
+.affichage {
+	flex: 40%;
 }

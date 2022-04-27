@@ -1,0 +1,31 @@
+.nav {
+	flex: 10%;
+	border-right: 1px solid #fff;
+	padding-left: 3.4rem;
+	padding-top: 2rem;
+	height: 100vh;
+}
+.list {
+	list-style: none;
+}
+.list li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 1.8rem;
+}
+.list li a {
+	color: var(--white);
+	text-decoration: none;
+	transition: all 0.4s linear;
+}
+
+.list li svg {
+	fill: var(--success);
+	width: 13px;
+	height: 13px;
+}
+
+.list li a:hover {
+	color: var(--success);
+}

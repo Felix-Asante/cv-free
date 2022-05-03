@@ -36,9 +36,11 @@ function Education() {
 						>
 							Ajouter une formation
 						</button>
-						<button type="button" onClick={() => reduceFormation()}>
-							supprimmer
-						</button>
+						{formations.length > 1 && (
+							<button type="button" onClick={() => reduceFormation()}>
+								supprimmer
+							</button>
+						)}
 					</div>
 				</div>
 			</div>

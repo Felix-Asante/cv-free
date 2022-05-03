@@ -17,7 +17,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--background);
-	overflow-y: hidden;
+	/* overflow-y: hidden; */
 }
 
 .text-success {
@@ -38,10 +38,39 @@ body {
 	flex: 40%;
 }
 
+.layout {
+	position: relative;
+	padding-top: 4.4rem;
+}
+
 a:active {
 	color: var(--success);
 }
 .section-header {
 	margin-bottom: 25px;
 	color: var(--white);
+	text-transform: uppercase;
+}
+.divider {
+	height: 10px;
+	width: 100%;
+	background: var(--success);
+	margin-bottom: 14px;
+}
+
+button {
+	border: 1px solid var(--success);
+	padding: 8px;
+	border-radius: 4px;
+	color: var(--white);
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: bold;
+}
+.flex button {
+	background-color: transparent;
+}
+.flex .btn-success {
+	background-color: var(--success);
+	margin-right: 10px;
 }

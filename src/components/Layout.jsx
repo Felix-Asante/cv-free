@@ -6,7 +6,7 @@ function Layout(props) {
 	return (
 		<div>
 			<Header />
-			<div className="flex">
+			<div className="flex layout">
 				<Menu />
 				<div className="contenu">{props.children}</div>
 				<div className="affichage">Affichage</div>

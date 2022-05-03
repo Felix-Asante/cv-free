@@ -27,6 +27,12 @@ function Profile() {
 				/>
 				<Input
 					type="text"
+					placeholder="Nationalite"
+					name="nationalite"
+					labelText="Nationalite:"
+				/>
+				<Input
+					type="text"
 					placeholder="Address"
 					name="address"
 					labelText="Address:"

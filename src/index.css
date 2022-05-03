@@ -31,7 +31,17 @@ body {
 
 .contenu {
 	flex: 30%;
+	padding: 2rem;
+	border-right: 1.5px solid #333;
 }
 .affichage {
 	flex: 40%;
+}
+
+a:active {
+	color: var(--success);
+}
+.section-header {
+	margin-bottom: 25px;
+	color: var(--white);
 }

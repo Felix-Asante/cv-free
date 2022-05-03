@@ -1,15 +1,11 @@
-import Header from "./components/Header";
-import Menu from "./components/Menu";
+import Layout from "./components/Layout";
+
+import Profile from "./pages/Profile";
 function App() {
 	return (
-		<div>
-			<Header />
-			<div className="flex">
-				<Menu />
-				<div className="contenu">Contenu</div>
-				<div className="affichage">Affichage</div>
-			</div>
-		</div>
+		<Layout>
+			<Profile />
+		</Layout>
 	);
 }
 

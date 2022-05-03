@@ -6,6 +6,7 @@ import {
 	AiOutlineProject,
 } from "react-icons/ai";
 import { FaUserGraduate, FaGraduationCap } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Menu() {
 	return (
@@ -13,28 +14,28 @@ function Menu() {
 			<ul className={style.list}>
 				<li>
 					<AiOutlineUser />
-					<a href="#">Profile</a>
+					<Link to="/">Profile</Link>
 				</li>
 				<li>
 					<FaUserGraduate />
-					<a href="#">Education</a>
+					<Link to="education">Education</Link>
 				</li>
 				<li>
 					<FaUserGraduate />
 
-					<a href="#">Work</a>
+					<Link to="work">Work</Link>
 				</li>
 				<li>
 					<AiOutlineProfile />
-					<a href="#">Skills</a>
+					<Link to="skills">Skills</Link>
 				</li>
 				<li>
 					<AiOutlineProject />
-					<a href="#">Projects</a>
+					<Link to="projects">Projects</Link>
 				</li>
 				<li>
 					<FaGraduationCap />
-					<a href="#">Awards</a>
+					<Link to="awards">Awards</Link>
 				</li>
 			</ul>
 		</nav>

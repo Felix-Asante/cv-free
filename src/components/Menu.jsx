@@ -28,7 +28,7 @@ function Menu() {
 				<li>
 					<FaUserGraduate />
 					<Link
-						to="education"
+						to="/education"
 						style={{ color: path === "/education" ? "#0da65b" : "#fff" }}
 					>
 						Education
@@ -38,7 +38,7 @@ function Menu() {
 					<FaUserGraduate />
 
 					<Link
-						to="work"
+						to="/work"
 						style={{ color: path === "/work" ? "#0da65b" : "#fff" }}
 					>
 						Work
@@ -47,7 +47,7 @@ function Menu() {
 				<li>
 					<AiOutlineProfile />
 					<Link
-						to="skills"
+						to="/skills"
 						style={{ color: path === "/skills" ? "#0da65b" : "#fff" }}
 					>
 						Skills
@@ -56,7 +56,7 @@ function Menu() {
 				<li>
 					<AiOutlineProject />
 					<Link
-						to="projects"
+						to="/projects"
 						style={{ color: path === "/project" ? "#0da65b" : "#fff" }}
 					>
 						Projects
@@ -65,7 +65,7 @@ function Menu() {
 				<li>
 					<FaGraduationCap />
 					<Link
-						to="awards"
+						to="/awards"
 						style={{ color: path === "/awards" ? "#0da65b" : "#fff" }}
 					>
 						Awards

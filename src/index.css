@@ -24,11 +24,27 @@ body {
 	color: var(--success);
 }
 
+textarea {
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	transition: 500ms;
+	padding: 12px 8px 3px 6px;
+	margin-bottom: 15px;
+	color: var(--white);
+}
+textarea:focus {
+	border-color: var(--success);
+}
 /* ! LAYOUT STYLES */
 .flex {
 	display: flex;
 }
-
+.items-center {
+	align-items: center;
+}
 .contenu {
 	flex: 30%;
 	padding: 2rem;

@@ -16,7 +16,7 @@ function Education() {
 		setFormations(formations.slice(0, -1));
 	};
 	return (
-		<Layout>
+		<Layout prev="/" next="/work">
 			<h3 className="section-header">Votre formation</h3>
 			<div className="formulaire">
 				<div className="heading">

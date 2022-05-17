@@ -57,6 +57,7 @@ textarea:focus {
 .layout {
 	position: relative;
 	padding-top: 4.4rem;
+	margin-bottom: 3rem;
 }
 
 a:active {

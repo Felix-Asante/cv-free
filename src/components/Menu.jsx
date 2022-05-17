@@ -57,7 +57,7 @@ function Menu() {
 					<AiOutlineProject />
 					<Link
 						to="/projects"
-						style={{ color: path === "/project" ? "#0da65b" : "#fff" }}
+						style={{ color: path === "/projects" ? "#0da65b" : "#fff" }}
 					>
 						Projects
 					</Link>

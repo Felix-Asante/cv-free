@@ -16,7 +16,7 @@ function Work() {
 		setExperience(experience.slice(0, -1));
 	};
 	return (
-		<Layout>
+		<Layout prev="/education" next="/skills">
 			<h3 className="section-header">Vos Experiences</h3>
 			<div className="formulaire">
 				<div className="heading">

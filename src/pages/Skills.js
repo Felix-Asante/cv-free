@@ -4,7 +4,7 @@ import SkillsModule from "../modules/Skills";
 import Input from "../components/Input";
 function Skills() {
 	return (
-		<Layout>
+		<Layout prev="/work" next="/projects">
 			<h4 className="section-header">Vos competence</h4>
 			<Input
 				type="text"

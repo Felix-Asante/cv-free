@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Education from "./pages/Education";
 import Work from "./pages/Work";
 import Skills from "./pages/Skills";
+import Project from "./pages/Project";
+import Awards from "./pages/Awards";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
@@ -15,6 +17,8 @@ root.render(
 				<Route path="/education" element={<Education />} />
 				<Route path="/work" element={<Work />} />
 				<Route path="/skills" element={<Skills />} />
+				<Route path="/projects" element={<Project />} />
+				<Route path="/awards" element={<Awards />} />
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>

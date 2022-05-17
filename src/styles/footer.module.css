@@ -1,0 +1,22 @@
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1.5px solid #333;
+	background-color: var(--background);
+	height: 55px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.btn {
+	background-color: transparent;
+	border-radius: 20px;
+	transition: 50ms;
+	padding: 8px 12px;
+}
+.btn:hover {
+	background: var(--success);
+}

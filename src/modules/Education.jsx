@@ -1,23 +1,25 @@
 import React from "react";
-import Input from "../components/Input";
+import FormGroup from "../components/FormGroup";
 
 function Education() {
 	return (
 		<div>
 			<div className="divider"></div>
-			<Input
-				type="text"
-				placeholder="Nom de l'établissement"
-				labelText="Etablissement"
-			/>
-			<Input type="text" placeholder="Ville et Pays" labelText="Lieu" />
-			<Input
-				type="text"
-				placeholder="Annee academique"
-				labelText="Annee academique"
-			/>
-			<Input type="text" placeholder="Filière" labelText="Filière" />
-			<Input type="text" placeholder="Niveau" labelText="Niveau" />
+			<FormGroup labelText="Etablissement">
+				<input type="text" placeholder="Nom de l'établissement" />
+			</FormGroup>
+			<FormGroup labelText="Lieu">
+				<input type="text" placeholder="Ville et Pays" />
+			</FormGroup>
+			<FormGroup labelText="Annee academique">
+				<input type="text" placeholder="Annee academique" />
+			</FormGroup>
+			<FormGroup labelText="Filière">
+				<input type="text" placeholder="Filière" />
+			</FormGroup>
+			<FormGroup labelText="Niveau">
+				<input type="text" placeholder="Niveau" />
+			</FormGroup>
 		</div>
 	);
 }

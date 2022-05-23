@@ -1,17 +1,14 @@
 import React from "react";
 import style from "../styles/input.module.css";
 
-function Input({ type, placeholder, name, labelText }) {
+function Input({ type, placeholder, name }) {
 	return (
-		<div className={style.input}>
-			<label className={style.label}>{labelText}</label>
-			<input
-				type={type}
-				placeholder={placeholder}
-				name={name}
-				className={style.input}
-			/>
-		</div>
+		<input
+			type={type}
+			placeholder={placeholder}
+			name={name}
+			className={style.input}
+		/>
 	);
 }
 

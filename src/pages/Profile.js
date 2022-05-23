@@ -1,42 +1,79 @@
 import React from "react";
-import Input from "../components/Input";
+import {
+	setFirstName,
+	setLastName,
+	setEmail,
+	setTelephone,
+	setNationality,
+	setAddress,
+} from "../redux/features/profile.slice";
+import { useAppDispatch, useAppSelector } from "../hooks/useRedux";
+import FormGroup from "../components/FormGroup";
 
 function Profile() {
+	const dispatch = useAppDispatch();
+	const { firstName, lastName, email, telephone, address, nationality } =
+		useAppSelector((state) => state.profile);
+
 	return (
 		<div>
 			<h4 className="section-header">INFORMATIONS PERSONNELLE</h4>
 			<div className="formulaire">
-				<Input type="text" placeholder="Nom" name="nom" labelText="Nom:" />
-				<Input
-					type="text"
-					placeholder="Prenom"
-					name="prenom"
-					labelText="Prenom:"
-				/>
-				<Input
-					type="email"
-					placeholder="example@email.com"
-					name="email"
-					labelText="Email:"
-				/>
-				<Input
-					type="tel"
-					placeholder="Telephone"
-					name="tel"
-					labelText="Telephone:"
-				/>
-				<Input
-					type="text"
-					placeholder="Nationalite"
-					name="nationalite"
-					labelText="Nationalite:"
-				/>
-				<Input
-					type="text"
-					placeholder="Address"
-					name="address"
-					labelText="Address:"
-				/>
+				<FormGroup labelText="Nom">
+					<input
+						type="text"
+						placeholder="Nom"
+						name="nom"
+						onChange={(e) => dispatch(setFirstName(e.target.value.trim()))}
+						value={firstName}
+					/>
+				</FormGroup>
+
+				<FormGroup labelText="Prenom:">
+					<input
+						type="text"
+						placeholder="Prenom"
+						name="prenom"
+						onChange={(e) => dispatch(setLastName(e.target.value.trim()))}
+						value={lastName}
+					/>
+				</FormGroup>
+				<FormGroup labelText="Email:">
+					<input
+						type="email"
+						placeholder="example@email.com"
+						name="email"
+						onChange={(e) => dispatch(setEmail(e.target.value.trim()))}
+						value={email}
+					/>
+				</FormGroup>
+				<FormGroup labelText="Telephone:">
+					<input
+						type="tel"
+						placeholder="Telephone"
+						name="tel"
+						onChange={(e) => dispatch(setTelephone(e.target.value.trim()))}
+						value={telephone}
+					/>
+				</FormGroup>
+				<FormGroup labelText="Nationalite:">
+					<input
+						type="text"
+						placeholder="Nationalite"
+						name="nationalite"
+						onChange={(e) => dispatch(setNationality(e.target.value.trim()))}
+						value={nationality}
+					/>
+				</FormGroup>
+				<FormGroup labelText="Address:">
+					<input
+						type="text"
+						placeholder="Address"
+						name="address"
+						onChange={(e) => dispatch(setAddress(e.target.value.trim()))}
+						value={address}
+					/>
+				</FormGroup>
 			</div>
 		</div>
 	);

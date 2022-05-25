@@ -12,7 +12,9 @@ function Education() {
 		<EducationModule key={0} index={0} />,
 	]);
 	const dispatch = useAppDispatch();
-	const { content } = useAppSelector((state) => state.education);
+	const { content, educationTitle } = useAppSelector(
+		(state) => state.education
+	);
 	useEffect(() => {
 		if (content.length > 1) {
 			const oldContent = [];
@@ -48,6 +50,7 @@ function Education() {
 							onChange={(e) =>
 								dispatch(setEducationTitle(e.target.value.trim()))
 							}
+							value={educationTitle}
 						/>
 					</FormGroup>
 

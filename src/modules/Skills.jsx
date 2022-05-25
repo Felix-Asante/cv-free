@@ -48,9 +48,11 @@ function SkillsModule() {
 						<button style={styles.btn} onClick={() => addDetailSkill()}>
 							+
 						</button>
-						<button style={styles.btn} onClick={() => removeDetailSkill()}>
-							-
-						</button>
+						{detail.length > 1 && (
+							<button style={styles.btn} onClick={() => removeDetailSkill()}>
+								-
+							</button>
+						)}
 					</div>
 				</div>
 			</div>

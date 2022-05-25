@@ -52,12 +52,27 @@ const skillSlice = createSlice({
 			const result = competenceSkills(item, action.payload);
 			state.competence[action.payload.index] = result;
 		},
+		onRemoveSkills(state, action) {
+			state.competence = state.competence.slice(0, -1);
+		},
+		onCompetenceSkillRemove(state, action) {
+			const item = state.competence[action.payload.index].items;
+			state.competence[action.payload.index].items = item.slice(
+				action.payload.step,
+				1
+			);
+		},
 		setSkillTitle(state, action) {
 			state.skillTitle = action.payload;
 		},
 	},
 });
 
-export const { setSkillTitle, setCompetenceTitle, setCompetenceSkill } =
-	skillSlice.actions;
+export const {
+	setSkillTitle,
+	setCompetenceTitle,
+	setCompetenceSkill,
+	onRemoveSkills,
+	onCompetenceSkillRemove,
+} = skillSlice.actions;
 export default skillSlice.reducer;

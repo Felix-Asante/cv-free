@@ -1,28 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import FormGroup from "../components/FormGroup";
 import { useAppDispatch, useAppSelector } from "../hooks/useRedux";
 import {
 	setCompetenceTitle,
 	setCompetenceSkill,
 } from "../redux/features/skills.slice";
+import { onCompetenceSkillRemove } from "../redux/features/skills.slice";
 function SkillsModule({ index }) {
 	const { competence } = useAppSelector((state) => state.skill);
 	const dispatch = useAppDispatch();
-	const Skills = ({ step, index }) => (
-		<input
-			type="text"
-			placeholder="Competence"
-			onChange={(e) =>
-				dispatch(
-					setCompetenceSkill({
-						step,
-						index,
-						text: e.target.value.trim(),
-					})
-				)
-			}
-		/>
-	);
+	const stepCount = useRef(null);
 	const styles = {
 		btn: {
 			borderRadius: "100%",
@@ -43,10 +30,41 @@ function SkillsModule({ index }) {
 			marginBottom: "1.3rem",
 		},
 	};
+	const Skills = ({ step, index }) => {
+		stepCount.current = step;
+		return (
+			<input
+				type="text"
+				placeholder="Competence"
+				onChange={(e) =>
+					dispatch(
+						setCompetenceSkill({
+							step,
+							index,
+							text: e.target.value,
+						})
+					)
+				}
+				value={competence[index]?.items[step]}
+				style={{ marginBottom: "14px" }}
+			/>
+		);
+	};
 
 	const [detail, setDetail] = useState([
 		<Skills key={0} index={index} step={0} />,
 	]);
+
+	// ENDED HERE
+	useEffect(() => {
+		if (competence[index]?.items?.length > 1) {
+			const oldDetails = [];
+			for (let i = 0; i < competence[index].items.length; i++) {
+				oldDetails.push(<Skills key={i} index={index} step={i} />);
+			}
+			setDetail(oldDetails);
+		}
+	}, []);
 
 	const addDetailSkill = () => {
 		setDetail((prev) => [
@@ -56,6 +74,7 @@ function SkillsModule({ index }) {
 	};
 	const removeDetailSkill = () => {
 		setDetail(detail.slice(0, -1));
+		dispatch(onCompetenceSkillRemove({ index, step: stepCount }));
 	};
 
 	return (
@@ -66,7 +85,7 @@ function SkillsModule({ index }) {
 					type="Nom de competence"
 					placeholder="Programmation web"
 					onChange={(e) =>
-						dispatch(setCompetenceTitle({ index, text: e.target.value.trim() }))
+						dispatch(setCompetenceTitle({ index, text: e.target.value }))
 					}
 					value={competence[index]?.title}
 				/>

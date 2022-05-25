@@ -7,11 +7,16 @@ import {
 } from "react-icons/ai";
 import { FaUserGraduate, FaGraduationCap } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { useAppSelector } from "../hooks/useRedux";
 
 function Menu() {
 	const location = useLocation();
 	const [path, setPath] = useState(null);
+	const data = useAppSelector((state) => state);
 
+	const generateCV = () => {
+		console.log(data);
+	};
 	useEffect(() => {
 		setPath(location.pathname);
 	}, [location.pathname]);
@@ -72,6 +77,10 @@ function Menu() {
 					</Link>
 				</li>
 			</ul>
+
+			<button className={style.btn} onClick={() => generateCV()}>
+				Create CV
+			</button>
 		</nav>
 	);
 }

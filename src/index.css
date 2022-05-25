@@ -72,7 +72,7 @@ a:active {
 	height: 10px;
 	width: 100%;
 	background: var(--success);
-	margin-bottom: 14px;
+	margin: 14px 0;
 }
 
 button {

@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import SkillsModule from "../modules/Skills";
 import FormGroup from "../components/FormGroup";
+import { useAppDispatch, useAppSelector } from "../hooks/useRedux";
+import { setSkillTitle } from "../redux/features/skills.slice";
 function Skills() {
+	const { skillTitle } = useAppSelector((state) => state.skill);
+	const dispatch = useAppDispatch();
 	const [skillsModule, setSkillsModule] = useState([
 		<SkillsModule key={0} index={0} />,
 	]);
@@ -24,7 +28,12 @@ function Skills() {
 		<Layout prev="/work" next="/projects">
 			<h4 className="section-header">Vos competence</h4>
 			<FormGroup labelText="Titre de la section">
-				<input type="text" placeholder="Titre de la section" />
+				<input
+					type="text"
+					placeholder="Titre de la section"
+					onChange={(e) => dispatch(setSkillTitle(e.target.value.trim()))}
+					value={skillTitle}
+				/>
 			</FormGroup>
 			{skillsModule}
 			<div className="flex">

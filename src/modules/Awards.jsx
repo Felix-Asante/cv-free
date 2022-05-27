@@ -16,7 +16,7 @@ function AwardsModule({ index }) {
 							setAward({
 								FIELD: "name",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						);
 					}}
@@ -32,7 +32,7 @@ function AwardsModule({ index }) {
 							setAward({
 								FIELD: "year",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						);
 					}}
@@ -48,7 +48,7 @@ function AwardsModule({ index }) {
 							setAward({
 								FIELD: "organizationName",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						);
 					}}

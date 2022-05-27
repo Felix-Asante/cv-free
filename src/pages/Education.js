@@ -47,9 +47,7 @@ function Education() {
 						<input
 							type="text"
 							placeholder="Titre de la section"
-							onChange={(e) =>
-								dispatch(setEducationTitle(e.target.value.trim()))
-							}
+							onChange={(e) => dispatch(setEducationTitle(e.target.value))}
 							value={educationTitle}
 						/>
 					</FormGroup>

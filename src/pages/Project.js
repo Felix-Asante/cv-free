@@ -47,7 +47,7 @@ function Project() {
 							type="text"
 							placeholder="Titre de la section"
 							onChange={(e) => {
-								dispatch(setProjectTitle(e.target.value.trim()));
+								dispatch(setProjectTitle(e.target.value));
 							}}
 							value={projectTitle}
 						/>

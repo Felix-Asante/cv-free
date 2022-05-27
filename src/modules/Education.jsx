@@ -17,7 +17,7 @@ function Education({ index }) {
 							setContent({
 								FIELD: "school",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -33,7 +33,7 @@ function Education({ index }) {
 							setContent({
 								FIELD: "location",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -49,7 +49,7 @@ function Education({ index }) {
 							setContent({
 								FIELD: "year",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -65,7 +65,7 @@ function Education({ index }) {
 							setContent({
 								FIELD: "course",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -81,7 +81,7 @@ function Education({ index }) {
 							setContent({
 								FIELD: "level",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}

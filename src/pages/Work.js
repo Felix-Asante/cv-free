@@ -45,7 +45,7 @@ function Work() {
 						<input
 							type="text"
 							placeholder="Titre de la section"
-							onChange={(e) => dispatch(setWorkTitle(e.target.value.trim()))}
+							onChange={(e) => dispatch(setWorkTitle(e.target.value))}
 							value={workTitle}
 						/>
 					</FormGroup>

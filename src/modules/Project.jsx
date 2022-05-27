@@ -19,7 +19,7 @@ function Project({ index }) {
 							setProject({
 								FIELD: "projectName",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -35,7 +35,7 @@ function Project({ index }) {
 							setProject({
 								FIELD: "link",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}

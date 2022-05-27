@@ -43,7 +43,7 @@ function Awards() {
 							type="text"
 							placeholder="Titre de la section"
 							onChange={(e) => {
-								dispatch(setAwardTitle(e.target.value.trim()));
+								dispatch(setAwardTitle(e.target.value));
 							}}
 							value={awardTitle}
 						/>

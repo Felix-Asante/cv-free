@@ -24,7 +24,7 @@ function Profile() {
 						type="text"
 						placeholder="Nom"
 						name="nom"
-						onChange={(e) => dispatch(setFirstName(e.target.value.trim()))}
+						onChange={(e) => dispatch(setFirstName(e.target.value))}
 						value={firstName}
 					/>
 				</FormGroup>
@@ -34,7 +34,7 @@ function Profile() {
 						type="text"
 						placeholder="Prenom"
 						name="prenom"
-						onChange={(e) => dispatch(setLastName(e.target.value.trim()))}
+						onChange={(e) => dispatch(setLastName(e.target.value))}
 						value={lastName}
 					/>
 				</FormGroup>
@@ -43,7 +43,7 @@ function Profile() {
 						type="email"
 						placeholder="example@email.com"
 						name="email"
-						onChange={(e) => dispatch(setEmail(e.target.value.trim()))}
+						onChange={(e) => dispatch(setEmail(e.target.value))}
 						value={email}
 					/>
 				</FormGroup>
@@ -52,7 +52,7 @@ function Profile() {
 						type="tel"
 						placeholder="Telephone"
 						name="tel"
-						onChange={(e) => dispatch(setTelephone(e.target.value.trim()))}
+						onChange={(e) => dispatch(setTelephone(e.target.value))}
 						value={telephone}
 					/>
 				</FormGroup>
@@ -61,7 +61,7 @@ function Profile() {
 						type="text"
 						placeholder="Nationalite"
 						name="nationalite"
-						onChange={(e) => dispatch(setNationality(e.target.value.trim()))}
+						onChange={(e) => dispatch(setNationality(e.target.value))}
 						value={nationality}
 					/>
 				</FormGroup>
@@ -70,7 +70,7 @@ function Profile() {
 						type="text"
 						placeholder="Address"
 						name="address"
-						onChange={(e) => dispatch(setAddress(e.target.value.trim()))}
+						onChange={(e) => dispatch(setAddress(e.target.value))}
 						value={address}
 					/>
 				</FormGroup>

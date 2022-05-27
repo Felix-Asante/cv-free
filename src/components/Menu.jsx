@@ -7,15 +7,32 @@ import {
 } from "react-icons/ai";
 import { FaUserGraduate, FaGraduationCap } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import { useAppSelector } from "../hooks/useRedux";
-
-function Menu() {
+import { useAppDispatch, useAppSelector } from "../hooks/useRedux";
+import { BACKEND_URL } from "../config/general";
+import { setDocument } from "../redux/store";
+function Menu({ updateDocument }) {
 	const location = useLocation();
 	const [path, setPath] = useState(null);
 	const data = useAppSelector((state) => state);
+	const dispatch = useAppDispatch();
+	const generateCV = async () => {
+		await fetch(`${BACKEND_URL}/create-pdf`, {
+			method: "POST",
+			body: JSON.stringify(data),
+			// mode: "no-cors",
+			headers: {
+				"Content-Type": "application/json",
+				"Access-Control-Allow-Origin": "*",
+				"Access-Control-Allow-Headers": "Content-Type",
+				"Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT",
+			},
+		});
 
-	const generateCV = () => {
-		console.log(data);
+		setTimeout(async () => {
+			const fetchRes = await fetch(`${BACKEND_URL}/fetch-pdf`);
+			const result = await fetchRes.json();
+			dispatch(setDocument("data:application/pdf;base64," + result.data));
+		}, 5000);
 	};
 	useEffect(() => {
 		setPath(location.pathname);

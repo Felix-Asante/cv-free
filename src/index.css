@@ -17,7 +17,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--background);
-	/* overflow-y: hidden; */
+	overflow-x: hidden;
 }
 
 .text-success {
@@ -52,6 +52,7 @@ textarea:focus {
 }
 .affichage {
 	flex: 40%;
+	/* max-width: 40%; */
 }
 .tool-bar {
 	display: flex;

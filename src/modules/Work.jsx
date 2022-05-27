@@ -18,7 +18,7 @@ function Work({ index }) {
 							setWork({
 								FIELD: "company",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -34,7 +34,7 @@ function Work({ index }) {
 							setWork({
 								FIELD: "position",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -50,7 +50,7 @@ function Work({ index }) {
 							setWork({
 								FIELD: "companyAddress",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -66,7 +66,7 @@ function Work({ index }) {
 							setWork({
 								FIELD: "startDate",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -82,7 +82,7 @@ function Work({ index }) {
 							setWork({
 								FIELD: "endDate",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
@@ -99,7 +99,7 @@ function Work({ index }) {
 							setWork({
 								FIELD: "responsibility",
 								index,
-								value: e.target.value.trim(),
+								value: e.target.value,
 							})
 						)
 					}
